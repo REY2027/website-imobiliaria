@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+
+body {
+  overflow: -x hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.2s;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #bbbbbb;
+}
+
+.dropdown-venda {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-venda .dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown-venda .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.dropdown-venda .dropdown-content a {
+  font-weight: 400;
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-venda .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+
+.dropdown-venda .dropdown-content.show {
+  display: block;
+}
+
+.dropdown-contatos {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-contatos .dropbtn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.5s;
+}
+
+.dropdown-contatos .dropbtn:hover {
+  background-color: #bbbbbb;
+}
+
+.dropdown-contatos .dropdown-content {
+  display: none;
+  right: 0;
+  left: auto;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-contatos .dropdown-content a {
+  font-weight: 400;
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-contatos .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+
+.dropdown-contatos .dropdown-content.show {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  aspect-ratio: 2000 / 1070;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.search-box {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  background: rgba(243, 243, 243, 0.623);
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-box select,
+.search-box input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.search-box .btn-buscar {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.anuncio-imovel {
+  font-size: 0.7rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 30vh;
+  padding: 15px 20px;
+  display: flex;
+  background-color: #e6e6e6;
+}
+
+.anuncio-imovel h1 span {
+  display: block;
+  font-weight: 400;
+}
+
+.anuncio-imovel p {
+  font-size: 1.2rem;
+}
+
+.anuncio-imovel button img {
+  margin-right: 15px;
+}
+
+.anuncio-imovel button {
+  border-radius: 10px;
+  border: none;
+  width: 65vh;
+  height: 15vh;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  transition: background 0.3s;
+}
+
+.anuncio-imovel button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.destaque-casas {
+  background-color: #eee;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.destaque-casas h1 {
+  height: 20vh;
+  padding: 15px 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 calc(100% / 3);
+  padding: 0 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-dots button {
+  border: none;
+  background: #bbb;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+  background: #333;
+}
+
+.destaque-apartamentos {
+  background-color: #eee;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.destaque-apartamentos h1 {
+  height: 20vh;
+  padding: 15px 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 calc(100% / 3);
+  padding: 0 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.carousel-dots button {
+  border: none;
+  background: #bbb;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+  background: #333;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: #ccc;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col ul li a img {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+.footer-col h3,
+h4 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.footer-col li span {
+  display: block;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  background: #25d366; /* verde oficial WhatsApp */
+  border-radius: 50%;
+  padding: 10px; /* espaço entre a imagem e a borda verde */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+  transition: transform 0.3s;
+}
+
+.whatsapp-button img {
+  height: 40px;
+  width: 40px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
