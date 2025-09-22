@@ -11,6 +11,7 @@
 
 body {
   overflow: -x hidden;
+  background-color: #e6e6e6;
 }
 
 .header {
@@ -154,252 +155,102 @@ body {
   display: block;
 }
 
-.hero {
-  position: relative;
-  aspect-ratio: 2000 / 1070;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.info-top {
+  padding: 10px 20px;
   text-align: center;
-  overflow: hidden;
+  font-size: 0.9rem;
+  color: #000;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-.hero img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center top;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.search-box {
-  margin-top: 20px;
+.container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
-  background: rgba(243, 243, 243, 0.623);
-  padding: 15px 20px;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.info {
+  max-width: 350px;
+}
+
+.info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.info p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.info strong {
+  color: #000;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  flex: 1;
 }
 
-.search-box select,
-.search-box input {
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.search-box .btn-buscar {
+textarea {
+  resize: both;
+  min-height: 80px;
+}
+
+button {
   background: #000;
   color: #fff;
   border: none;
+  padding: 12px 20px;
   border-radius: 6px;
-  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s;
-}
-
-.anuncio-imovel {
-  font-size: 0.7rem;
-  align-items: center;
-  justify-content: space-between;
-  height: 30vh;
-  padding: 15px 20px;
-  display: flex;
-  background-color: #e6e6e6;
-}
-
-.anuncio-imovel h1 span {
-  display: block;
-  font-weight: 400;
-}
-
-.anuncio-imovel a {
-  color: #000;
-  font-size: 1.2rem;
-}
-
-.anuncio-imovel button img {
-  margin-right: 15px;
-}
-
-.anuncio-imovel button {
-  border-radius: 10px;
-  border: none;
-  width: 65vh;
-  height: 15vh;
-  background: #fff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 15px 20px;
-  transition: background 0.3s;
-}
-
-.anuncio-imovel button:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.destaque-casas {
-  background-color: #eee;
   width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
+  transition: 0.3s;
 }
 
-.destaque-casas h1 {
-  height: 20vh;
-  padding: 15px 20px;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-  flex: 0 0 calc(100% / 3);
-  padding: 0 10px;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-
-.carousel-dots {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.carousel-dots button {
-  border: none;
+button:hover {
   background: #bbb;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.carousel-dots button.active {
-  background: #333;
-}
-
-.destaque-apartamentos {
-  background-color: #eee;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
-}
-
-.destaque-apartamentos h1 {
-  height: 20vh;
-  padding: 15px 20px;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-  flex: 0 0 calc(100% / 3);
-  padding: 0 10px;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-
-.carousel-dots {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.carousel-dots button {
-  border: none;
-  background: #bbb;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.carousel-dots button.active {
-  background: #333;
-}
-
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-prev,
-.carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  color: #ccc;
-  font-size: 40px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  transition: color 0.3s;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-  background: rgba(0, 0, 0, 0);
-  color: #fff;
-}
-
-.carousel-prev {
-  left: 10px;
-}
-
-.carousel-next {
-  right: 10px;
 }
 
 .footer {
@@ -490,22 +341,4 @@ h4 {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
-}
-
-.ver-mais {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 15px;
-  display: block;
-  margin: 20px auto 0;
-  text-align: center;
-  transition: color 0.3s, background-color 0.3s;
-  cursor: pointer;
-}
-
-.ver-mais:hover {
-  background-color: #333;
-  color: #fff;
 }
